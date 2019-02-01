@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthService } from './auth.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ PDFService ],
+  providers: [ PDFService, AuthService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
